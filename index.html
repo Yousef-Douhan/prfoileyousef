@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Yousef Douhan — Backend Developer | PHP & Laravel</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=stylesheet"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body data-theme="dark">
+
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Yousef Douhan</a>
+                <ul class="nav-links">
+                    <li><a href="#about" data-i="nav_about">نبذة عني</a></li>
+                    <li><a href="#skills" data-i="nav_skills">المهارات</a></li>
+                    <li><a href="#projects" data-i="nav_projects">المشاريع</a></li>
+                    <li><a href="#certifications" data-i="nav_cert">الشهادات</a></li>
+                    <li><a href="#contact" data-i="nav_contact">تواصل معي</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="icon-btn" id="langToggle" title="Change Language">EN</button>
+                    <button class="icon-btn" id="themeToggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero container">
+        <div class="hero-content">
+            <h1 id="heroTitle">مرحباً، أنا <br><span>يوسف حسن دوحان</span></h1>
+            <div class="typed-role" id="typedRole">Backend Developer | PHP & Laravel</div>
+            <p id="heroDesc">طالب هندسة حاسوب في السنة الأخيرة، متخصص في تطوير الـ Backend بـ PHP وLaravel. أبني واجهات
+                RESTful API قوية، وأصمم قواعد بيانات MySQL محسّنة ومؤمنة.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary"><i class="fas fa-code"></i> <span id="btnProjects">استعرض
+                        مشاريعي</span></a>
+                <a href="#contact" class="btn btn-outline"><i class="fas fa-paper-plane"></i> <span
+                        id="btnContact">تواصل معي</span></a>
+            </div>
+            <div style="display: flex; gap: 1rem; font-size: 1.2rem;">
+                <a href="https://github.com/Yousef-Douhan" target="_blank" class="icon-btn"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yousefdouhan" target="_blank" class="icon-btn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/972592157706" target="_blank" class="icon-btn" style="color: #25D366;"><i
+                        class="fab fa-whatsapp"></i></a>
+                <a href="mailto:yousefdouhan006@gmail.com" class="icon-btn"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-snippet-box">
+                <span class="code-comment">// Restaurant Management System API Example</span><br>
+                <span class="code-keyword">namespace</span> App\Http\Controllers;<br><br>
+                <span class="code-keyword">class</span> <span class="code-variable">MenuController</span> <span
+                    class="code-keyword">extends</span> Controller<br>
+                {<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">public function</span> <span
+                    class="code-variable">index</span>()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;{<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="code-keyword">return</span>
+                MenuResource::<span class="code-variable">collection</span>(<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Menu::with(<span
+                    class="code-string">'category'</span>)->get()<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+        <div class="section-title">
+            <h2 id="aboutTitle">نبذة تعريفيّة</h2>
+            <p id="aboutSubtitle">شغوف بهندسة البرمجيات وبناء أنظمة خلفية ذات كفاءة عالية</p>
+        </div>
+        <div
+            style="background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 2.5rem; backdrop-filter: blur(10px);">
+            <p id="aboutText" style="font-size: 1.1rem; color: var(--text-secondary); line-height: 1.8;">
+                أنا طالب هندسة حاسوب في الجامعة الإسلامية بغزة (2023–2027)، متخصص في تطوير الـ Backend باستخدام PHP
+                وLaravel. أمتلك خبرة عملية في تصميم قواعد بيانات MySQL، بناء واجهات RESTful API، وتنفيذ أنظمة المصادقة
+                والصلاحيات (Sanctum/Passport & RBAC). أهتم بكتابة كود نظيف (Clean Code) وتطبيق مبادئ البرمجة كائنية
+                التوجه (OOP) لضمان أعلى أداء وقابلية للتوسع في التطبيقات.
+            </p>
+        </div>
+    </section>
+
+    <!-- Technical Skills Section -->
+    <section id="skills" class="container">
+        <div class="section-title">
+            <h2 id="skillsTitle">المهارات التقنية</h2>
+            <p id="skillsSubtitle">التقنيات والأدوات التي أستخدمها في بناء وتطوير الأنظمة</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fas fa-server"></i>
+                <h3 id="skillCat1">تطوير الـ Backend</h3>
+                <div class="skill-tags">
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">RESTful APIs</span>
+                    <span class="tag">MVC Architecture</span>
+                    <span class="tag">Eloquent ORM</span>
+                    <span class="tag">API Resources</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-database"></i>
+                <h3 id="skillCat2">قواعد البيانات</h3>
+                <div class="skill-tags">
+                    <span class="tag">MySQL</span>
+                    <span class="tag">Database Design</span>
+                    <span class="tag">Relational Schemas</span>
+                    <span class="tag">Query Optimization</span>
+                    <span class="tag">Migrations & Indexing</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-shield-alt"></i>
+                <h3 id="skillCat3">الأمان والصلاحيات</h3>
+                <div class="skill-tags">
+                    <span class="tag">Authentication</span>
+                    <span class="tag">Authorization</span>
+                    <span class="tag">Laravel Sanctum</span>
+                    <span class="tag">Laravel Passport</span>
+                    <span class="tag">RBAC</span>
+                </div>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-tools"></i>
+                <h3 id="skillCat4">الأدوات والمفاهيم</h3>
+                <div class="skill-tags">
+                    <span class="tag">Git & GitHub</span>
+                    <span class="tag">Composer</span>
+                    <span class="tag">Postman</span>
+                    <span class="tag">OOP</span>
+                    <span class="tag">Clean Code</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container">
+        <div class="section-title">
+            <h2 id="projectsTitle">المشاريع البارزة</h2>
+            <p id="projectsSubtitle">نماذج من أعمالي الهندسية وتطبيقات الـ Backend</p>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <div>
+                        <div style="display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap;">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">RESTful APIs</span>
+                            <span class="tag">Postman</span>
+                        </div>
+                        <h3 id="proj1Title">نظام لوحة تحكم لإدارة المطاعم</h3>
+                        <p id="proj1Desc">تطوير نظام إدارة متكامل مع نقاط API شاملة لإدارة قوائم الطعام، التصنيفات،
+                            وطلبات العملاء مع الالتزام بمعايير الحماية واستخدام Form Requests و API Resources.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Yousef-Douhan/restaurant-project-main" target="_blank"
+                            class="btn btn-outline" style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i
+                                class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <div class="project-info">
+                    <div>
+                        <div style="display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap;">
+                            <span class="tag">PHP</span>
+                            <span class="tag">Laravel</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Sanctum/Passport</span>
+                        </div>
+                        <h3 id="proj2Title">نظام مصادقة وصلاحيات لتجارة إلكترونية</h3>
+                        <p id="proj2Desc">بناء البنية التحتية الخلفية لنظام متجر إلكتروني يركز على أمن المصادقة متعددة
+                            الأدوار، حماية المسارات، وإدارة كتالوج المنتجات مع تحسين استعلامات قاعدة البيانات.</p>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Yousef-Douhan/eiser_shop" target="_blank" class="btn btn-outline"
+                            style="padding: 0.5rem 1rem; font-size: 0.9rem;"><i class="fab fa-github"></i> GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="container">
+        <div class="section-title">
+            <h2 id="certTitle">الشهادات والتدريب المهني</h2>
+            <p id="certSubtitle">التطوير المستمر للقدرات التقنية والأكاديمية</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 id="cert1Name">تطوير Laravel (70 ساعة)</h3>
+                <span>GazaTech Builders · 2026</span>
+                <p id="cert1Desc">تدريب متقدم في بناء التطبيقات الاحترافية باستخدام إطار العمل Laravel وتطوير الـ APIs.
+                </p>
+            </div>
+            <div class="timeline-item">
+                <h3 id="cert2Name">دبلوم تطوير الويب (230 ساعة)</h3>
+                <span>مركز الهمص للتدريب (معتمد من وزارة التربية والتعليم العالي) · 2025</span>
+                <p id="cert2Desc">تدريب شامل في تطوير الويب وتقنياته المختلفة.</p>
+            </div>
+            <div class="timeline-item">
+                <h3 id="cert3Name">العمل الحر والعلامة الشخصية (30 ساعة)</h3>
+                <span>GTB · 2026</span>
+                <p id="cert3Desc">تطوير المهارات المهنية وإدارة المشاريع الحرّة.</p>
+            </div>
+            <div class="timeline-item">
+                <h3 id="cert4Name">شهادة ICDL التدريبية</h3>
+                <span>معهد Learn More · 2026</span>
+                <p id="cert4Desc">إتقان المهارات الأساسية لاستخدام الحاسوب وتطبيقات المكتب.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <div class="section-title">
+            <h2 id="contactTitle">تواصل معي</h2>
+            <p id="contactSubtitle">متاح للفرص الوظيفية، مشاريع الـ Backend، والتعاون التقني</p>
+        </div>
+        <div class="contact-wrapper">
+            <div>
+                <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem;" id="letsTalk">لنبدأ العمل معاً</h3>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;" id="contactDesc">يسعدني تواصلكم معي لأي
+                    استفسار تقني، فرصة عمل، أو مشروع جديد.</p>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <span style="font-size: 0.85rem; color: var(--text-secondary); display: block;">البريد
+                            الإلكتروني</span>
+                        <strong>yousefdouhan006@gmail.com</strong>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fab fa-linkedin-in" style="color: #0A66C2;"></i>
+                    <div>
+                        <span style="font-size: 0.85rem; color: var(--text-secondary); display: block;">لينكد إن</span>
+                        <a href="https://www.linkedin.com/in/yousefdouhan" target="_blank"
+                            style="color: var(--text-primary); text-decoration: none; font-weight: bold;">linkedin.com/in/yousefdouhan</a>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fab fa-whatsapp" style="color: #25D366;"></i>
+                    <div>
+                        <span style="font-size: 0.85rem; color: var(--text-secondary); display: block;">واتساب</span>
+                        <a href="https://wa.me/972592157706" target="_blank"
+                            style="color: var(--text-primary); text-decoration: none; font-weight: bold;">+972
+                            59-215-7706</a>
+                    </div>
+                </div>
+
+                <div class="contact-info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span style="font-size: 0.85rem; color: var(--text-secondary); display: block;">الموقع</span>
+                        <strong id="locText">غزة، فلسطين</strong>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="event.preventDefault(); alert('تم إرسال رسالتك بنجاح!');">
+                <div class="form-group">
+                    <input type="text" placeholder="الاسم الكامل" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="البريد الإلكتروني" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder="الموضوع" required>
+                </div>
+                <div class="form-group">
+                    <textarea rows="5" placeholder="رسالتك..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="justify-content: center;"><span id="sendBtn">إرسال
+                        الرسالة</span> <i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2026 يوسف حسن دوحان — Backend Developer | PHP & Laravel</p>
+        </div>
+    </footer>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
